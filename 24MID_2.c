@@ -2,6 +2,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
+<<<<<<< HEAD
 
 int numlen(int num)
 {
@@ -42,4 +43,45 @@ int main(void)
 	A[count] = '\0';
 
 	printf("%d", count);
+=======
+#include <string.h>
+
+int numlen(int n)
+{
+	int i;
+	for (i = 0; n > 0; i++)
+		n /= 10;
+
+	return i;
+}
+
+/*int main(void)
+{
+	int n, k, i;
+	scanf("%d %d", &k, &n);
+	
+	int rslt = 0;
+	int flagN = n;
+	while (flagN < k) {
+		rslt += numlen(flagN);
+		flagN += n;
+	}
+
+	printf("%d",rslt);
+
+}*/
+
+int main(void)
+{
+	int n, k, i;
+	scanf("%d %d", &k, &n);
+
+	char rslt[100];
+	int flagN = n;
+	while (flagN < k) {
+		int tens = 1;
+		int len = numlen(flagN);
+
+	}
+>>>>>>> 56a51aa7fa7abeb8be3ab95da380b3b9b5bdd68e
 }
